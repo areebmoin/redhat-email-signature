@@ -16,7 +16,8 @@
 <form>
 <h1 class="badge">Red Hat <span>Signature Tool <em>PRE <br>Alpha</em></span></h1>
 
-<input type="text"  class="fullname"  placeholder="Full Name"/>
+<input type="text"  class="firstname"  name="firstname" placeholder="Firstname"/>
+<input type="text"  class="lastname"   name="lastname"  placeholder="Lastname"/>
 <input type="text"  class="position"  placeholder="Job Title, Department"/>
 <input type="text"  class="certs"      placeholder="Certifications"/>
 
@@ -27,6 +28,7 @@
 <input type="tel"   class="mobile"    placeholder="Mobile Phone"/>
 <input type="tel"   class="telephone" placeholder="Desk Phone"/>
 <input type="tel"   class="fax" placeholder="Fax"/>
+<input type="text"  class="im"  placeholder="irc@server,  slack@2 - use sparingly"/>
 
 <h3>Promotion</h3>
 <div class="promo-selector options">
@@ -95,8 +97,9 @@
 
 
 <div class="standard sig-container" id="full-sig">
-<span class="fullname-container"><p style="font-weight:bold; margin:0; padding:0; font-size: 14px; text-transform: uppercase; margin-bottom:0;">FIRSTNAME LASTNAME</p>
-</span>
+
+<p class="fullname-container" style="font-weight:bold; margin:0; padding:0; font-size: 14px; text-transform: uppercase; margin-bottom:0;">
+  <span class="firstname-container"></span> <span class="lastname-container"></span></p>
 
 <p class="position-container" style="font-weight:normal; font-size:11px;  margin:0;margin-bottom:4px;  text-transform: uppercase"><span class="position"></span><span class="cert" style=color:#ccc;"">, <span  style="font-weight:normal; color:#aaa;  margin:0; "></span></span></p>
 <p  class="legal-container"  style="font-weight:normal; margin:0; font-size:11px; color:#888;">Red Hat <span></span></p>
@@ -123,7 +126,7 @@
 </p>
 <table border="0" cell-padding="0" cell-spacing="0">
 <tr>
-<td width="100px"><a href="https://redhat.com"> <img src="//www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo-red-hat-black.png" width="90" height="auto"></a> </td>
+<td width="100px"><a href="https://red.ht/sig"> <img src="//www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo-red-hat-black.png" width="90" height="auto"></a> </td>
 
 
 <td class="promo" style="font-weight:normal; font-size:10px; ">

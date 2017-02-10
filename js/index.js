@@ -165,14 +165,35 @@ else {$(".fax-container").hide();
 
 //
 // fullname
+$(".fullname-container").show();
 
-$("input.fullname").on("change keyup paste", function(){
-  var fullname = $(this).val();
-  if(fullname) {
-    $(".fullname-container").show();
-    $(".fullname-container p").html(fullname);
+$("input.firstname").on("change keyup paste", function(){
+  var firstname = $(this).val();
+  if(firstname) {
+    $(".firstname-container").show();
+    $(".firstname-container").html(firstname);
   }
 else {
+}
+
+  updateHtmlSigRaw()
+});
+
+
+
+//
+// lastname
+$(".lastname-container").hide();
+
+$("input.lastname").on("change keyup paste", function(){
+  var lastname = $(this).val();
+  if(lastname) {
+    $(".lastname-container").show();
+    $(".lastname-container").html(lastname);
+  }
+else {
+  $(".lastname-container").hide();
+
 }
 
   updateHtmlSigRaw()
@@ -189,6 +210,8 @@ $("input.legal").on("change keyup paste", function(){
     $(".legal-container span").html(legal);
   }
 else {
+  $(".legal-container").hide();
+
 }
 
   updateHtmlSigRaw()
