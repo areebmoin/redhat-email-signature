@@ -3,15 +3,10 @@ document.addEventListener("touchstart", function(){}, true);
 
 // Place raw HTML of each version into appropriate containers
 function updateHtmlSigRaw() {
-  get_html_signature = document.getElementById("full-sig").innerHTML;
+  get_html_signature = document.getElementById("standard-target").innerHTML;
   $("#html textarea").text(get_html_signature);
 
-
   $("#html textarea").prepend('&lt;style&gt; @import url(overpass-30e2.kxcdn.com/overpass.css); &lt;/style&gt;').text;
-
-
-//  ugh  i just want tp cleanup the .hide mess for the textarea   $("*[style="display: none;"]").remove;
-
 
  }
 
@@ -165,11 +160,13 @@ else {$(".fax-container").hide();
 
 //
 // fullname
-$(".fullname-container").show();
+$(".fullname-container").hide();
+$(".firstname-container").hide();
 
 $("input.firstname").on("change keyup paste", function(){
   var firstname = $(this).val();
   if(firstname) {
+    $(".fullname-container").show();
     $(".firstname-container").show();
     $(".firstname-container").html(firstname);
   }
@@ -182,12 +179,36 @@ else {
 
 
 //
+// fullname
+$(".im-container").hide();
+
+$("input.im").on("change keyup paste", function(){
+  var im = $(this).val();
+  if(im) {
+
+    $(".contact-container").show();
+    $(".im-container").show();
+    $(".im-container span").html(im);
+  }
+else {
+  $(".im-container").hide();
+
+}
+
+  updateHtmlSigRaw()
+});
+
+
+
+
+//
 // lastname
 $(".lastname-container").hide();
 
 $("input.lastname").on("change keyup paste", function(){
   var lastname = $(this).val();
   if(lastname) {
+    $(".fullname-container").show();
     $(".lastname-container").show();
     $(".lastname-container").html(lastname);
   }
@@ -281,4 +302,35 @@ $(".email").on("change keyup paste", function(){
   } else {
   }
   updateHtmlSigRaw()
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// clipboard time
+
+new Clipboard('.btn', {
+  text: function (trigger) {
+    var targetId = trigger.getAttribute('standard-target');
+    var signature = document.querySelector(targetId).innerHTML;
+    signature =  signature.replace(/class="[^"]*"/g, '')
+                          .replace(/id="[^"]*"/g, '');
+      return signature;
+  }
 });
