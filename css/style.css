@@ -82,6 +82,7 @@ form {
   line-height: 3em;
   overflow: hidden;
   overflow-y:auto;
+  font-size: .9em;
 
   transition: all .5s ease;
   min-height: 5em;
@@ -330,21 +331,21 @@ left: 0;
 [type="text"]:focus,
 [type="email"]:focus,
 [type="tel"]:focus {
-  box-shadow: 0 .22em #7cd5ee ;
+  box-shadow: 0 .4em #7cd5ee ;
   animation: pulse 3s ease ;
 }
 
 
 @keyframes pulsetab {
     50% {
-      box-shadow: inset 0 .22em #0aa6d9
+      box-shadow: inset 0 .4em #0aa6d9
     }
 }
 
 
 @keyframes pulse {
     50% {
-      box-shadow: 0 .22em #0aa6d9
+      box-shadow: 0 .4em #0aa6d9
     }
 }
 
