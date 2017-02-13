@@ -11,6 +11,7 @@
 }
 
 body {
+  overflow:hidden;
   margin: 0;
   padding: 0;
   height: 101vh;
@@ -95,8 +96,9 @@ form {
 
 .preview {
   height: 100vh;
-  background: #f3f3f3 /*linear-gradient(to left, transparent 0%, #ccc 100%)*/;
-
+  overflow:auto;over
+  background-image: linear-gradient(to left, transparent 0%, #aaa 100%) ;
+background-color:#eee;
   background-repeat: repeat-y;
   background-size: .5em;
   background-position: top left;
@@ -107,7 +109,6 @@ label[for="hideform"] {
   cursor: pointer;
   user-select: none;
   background-color: rgba(20,20,20,0.8);
-
   transition: all .3s ease;
   display: block;
   width: 9em;
@@ -121,7 +122,9 @@ label[for="hideform"] {
 
 .team-promo{text-align:center; user-select:none; color:#aaa;}
 
-.team-promo a{color:currentcolor; text-decoration:none;}
+.team-promo a{color:currentcolor; text-decoration:none;outline:0;}
+.team-promo a:focus{color:#c00; }
+
 label[for="hideform"]:before {
   content: "Hide ";
 }
@@ -336,18 +339,10 @@ left: 0;
 }
 
 
-@keyframes pulsetab {
-    50% {
-      box-shadow: inset 0 .4em #0aa6d9
-    }
-}
+@keyframes pulsetab {    50% {      box-shadow: inset 0 .4em #0aa6d9  }}
 
 
-@keyframes pulse {
-    50% {
-      box-shadow: 0 .4em #0aa6d9
-    }
-}
+@keyframes pulse {    50% {      box-shadow: 0 .4em #0aa6d9    }}
 
 
 [type="email"] ,
@@ -382,11 +377,11 @@ input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
 }
 
 .sig-section {
-  max-width: 90%;
+  max-width: 95%;
   min-width: 30%;
   padding: 2em;
   box-shadow: 0 0.1em 3.75em rgba(0, 0, 0, 0.15);
-  margin: 2em auto !important;
+  margin: 1em auto !important;
   background-color: white;
 }
 
@@ -411,6 +406,7 @@ h4{
 .preview {
   position: relative;
   top: 0;
+  padding:0;
   margin-top: 0;
   padding-top: 4em;
 }
@@ -425,12 +421,12 @@ h4{
   height: 3em;
   line-height: 3em;
   text-align: center;
-  background-color: #e5e5e5;
+  background-color: #ddd;
   margin: 0;
   padding: 0;
   appearance: none;
   outline: 0;
-  color: #555;
+  color: #aaa;
 }
 
  #normal-view, #normal-view + label,
@@ -517,7 +513,7 @@ a,label,input{-webkit-tap-highlight-color: rgba(0,0,0,0);}
   background-color: transparent;
   position: absolute;
   display: block;
-  top: 0%;
+  top: 50%;
   z-index: -1;
   margin: 0 auto;
   left: 50%;
@@ -531,17 +527,14 @@ a,label,input{-webkit-tap-highlight-color: rgba(0,0,0,0);}
 
 .preview label {
 overflow:hidden;
- z-index:1;
-}
+ z-index:1;}
 
 .preview input:checked + label:before {
-  animation: flash .4s linear forwards;
-}
+  animation: flash .4s linear forwards;}
 
 .preview input:focus + label {
   animation: pulsetab 2s ease ;
-  box-shadow: inset 0  0.2em #7cd5ee;
-}
+  box-shadow: inset 0  0.2em #7cd5ee;}
 
 @keyframes flash {
   0% {
@@ -562,7 +555,7 @@ overflow:hidden;
  .btn{
    font-family: overpass, sans-serif ;
    font-size: 1rem ;
-   color:#c00;
+   color:#555;
    letter-spacing:.05em;
    text-transform: capitalize;
    font-weight: 600;
@@ -574,11 +567,11 @@ overflow:hidden;
    line-height: 4em;
    border:none;
    cursor:pointer;
-   border-color: #c00;
+  /* border-color: #c00;
    border-width: 2px !important;
-   border-style:solid;
-   background: linear-gradient(-45deg,transparent 50%,#c00 50.01%,#c00 100%);
-   background-size: 250%;
+   border-style:solid;*/
+   background: #eee linear-gradient(-45deg,transparent 50%,#c00 50.01%,#c00 100%);
+   background-size: 255%;
    text-align:center;
    background-position: 100% 100%;
    transition: background-position .2s linear, color .2s ease-out, background-color .1s ease-out .2s
@@ -612,3 +605,7 @@ background: repeating-linear-gradient(
 );
 }
 */
+
+
+
+.help img{display:block; margin: 1em auto;max-width: 90%;}
