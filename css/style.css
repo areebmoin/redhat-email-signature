@@ -417,7 +417,7 @@ h4{
 .preview > input,
 .preview > label {
   cursor: pointer; box-sizing:border-box;
-  width: 25%;
+  width: 33.33%;
   position: absolute;
   top: 0; left:0;
   display: block;
@@ -437,13 +437,10 @@ h4{
   left: 0%;
 }
 #text-view, #text-view + label{
-  left: 25%;}
+  left: 33.33333%;}
 
 #html-view, #html-view + label {
-  left: 50%;
-}
-#help, #help + label {
-  left: 75%;
+  left: 66.666%;
 }
 
 .preview > input {

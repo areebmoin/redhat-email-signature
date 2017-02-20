@@ -160,8 +160,6 @@ else {$(".fax-container").hide();
 
 //
 // fullname
-$(".fullname-container").hide();
-$(".firstname-container").hide();
 
 $("input.firstname").on("change keyup paste", function(){
   var firstname = $(this).val();
@@ -179,7 +177,7 @@ else {
 
 
 //
-// fullname
+// im
 $(".im-container").hide();
 
 $("input.im").on("change keyup paste", function(){
@@ -203,7 +201,6 @@ else {
 
 //
 // lastname
-$(".lastname-container").hide();
 
 $("input.lastname").on("change keyup paste", function(){
   var lastname = $(this).val();
@@ -213,7 +210,6 @@ $("input.lastname").on("change keyup paste", function(){
     $(".lastname-container").html(lastname);
   }
 else {
-  $(".lastname-container").hide();
 
 }
 
@@ -222,7 +218,6 @@ else {
 
 //
 // legal entity
-$(".legal-container").hide();
 
 $("input.legal").on("change keyup paste", function(){
   var legal = $(this).val();
@@ -258,22 +253,6 @@ else {$(".position-container").hide();
 
 
 
-
-//
-// Position
-$(".quote-container").hide();
-
-$("input.quote").on("change keyup paste", function(){
-  var fullname = $(this).val();
-  if(fullname) {
-    $(".quote-container").show();
-    $(".quote-container blockquote").html(fullname);
-  }
-else {$(".quote-container").hide();
-}
-
-  updateHtmlSigRaw()
-});
 
 
 
