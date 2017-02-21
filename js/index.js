@@ -3,14 +3,13 @@ document.addEventListener("touchstart", function(){}, true);
 // Place raw HTML of each version into appropriate containers
 function updateHtmlSigRaw() {
 
-  get_html_signature = $("#standard-target").clone(true);
-  $(get_html_signature).find('*[style*="display: none"]').remove();
-  $(get_html_signature).html();
+get_html_signature = $("#standard-target").clone(true);
+$(get_html_signature).find('*[style*="display: none"]').remove();
+$(get_html_signature).html();
 
 $("#html code").text($(get_html_signature).html());
-
   $("#html code").prepend('&lt;style&gt; @import url(overpass-30e2.kxcdn.com/overpass.css); &lt;/style&gt;').text;
- }
+}
 
 
 
@@ -20,7 +19,7 @@ $(".promo").hide();
 
 $(".promo-selector input[type=radio]").on("change", function(){
   if(document.getElementById('promo-1').checked) {   $(".promo").show();$(".promo-1").show();$(".promo-2").hide();$(".promo-3").hide();}
-  if(document.getElementById('promo-2').checked) {   $(".promo").show();$(".promo-2").show();$(".promo-1").hide();$(".promo-3").hide(); }
+  if(document.getElementById('promo-2').checked) {   $(".promo").show();$(".promo-2").show();$(".promo-1").hide();$(".promo-3").hide();}
   if(document.getElementById('promo-3').checked) {   $(".promo").show();$(".promo-3").show();$(".promo-1").hide();$(".promo-2").hide();}
   if(document.getElementById('nopromo').checked) {   $(".promo").hide();$(".promo-1").hide();$(".promo-2").hide();$(".promo-3").hide();}
 
@@ -305,10 +304,14 @@ $(".email").on("change keyup paste", function(){
 
 
 //// clipboard time
-
+new Clipboard('.btn');
 new Clipboard('.btn', {
   text: function (trigger) {
+
     var targetId = trigger.getAttribute('standard-target');
+    $(get_html_signature).find('*[style*="display: none"]').remove();
+    $(get_html_signature).html();
+
     var signature = document.querySelector(targetId).innerHTML;
     signature =  signature.replace(/class="[^"]*"/g, '')
                           .replace(/id="[^"]*"/g, '');
