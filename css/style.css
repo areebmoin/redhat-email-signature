@@ -486,13 +486,13 @@ h1{line-height:1em; font-weight: 500;}
 
 
 .sig-container{position:relative}
-textarea {
+code { user-select:all;
 border-radius:0;
   position:absolute; top:0; left:0; right:0; bottom:0; height: 100%; width: 100%;
   padding: 1em 1em;
-  background-color:#333; color: #fff; font-family: overpass-mono, monospace;
+  background-color:#eee; color: #222; font-family: overpass-mono, monospace;
   white-space: pre;
-  font-weight: 300;Yc0Xp9?sc
+  font-weight: 300;
 
   user-select: all;
   border: 0;
