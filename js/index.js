@@ -3,18 +3,13 @@ document.addEventListener("touchstart", function(){}, true);
 // Place raw HTML of each version into appropriate containers
 function updateHtmlSigRaw() {
 
+  get_html_signature = $("#standard-target").clone(true);
+  $(get_html_signature).find('*[style*="display: none"]').remove();
+  $(get_html_signature).html();
 
-
-  get_html_signature = document.getElementById("standard-target").innerHTML;
-  $("#html code").text(get_html_signature);
-  $('#html code [style="display: none;"]').remove();
-  $('#html code *:hidden').remove();
+$("#html code").text($(get_html_signature).html());
 
   $("#html code").prepend('&lt;style&gt; @import url(overpass-30e2.kxcdn.com/overpass.css); &lt;/style&gt;').text;
-
-
-$("#html span:hidden").remove();
-
  }
 
 
