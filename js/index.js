@@ -103,12 +103,15 @@ $(".contact-container").hide();
 $(".telephone-container").hide();
 
 $("input.telephone").on("change keyup paste", function(){
-  var telephone = $(this).val();
+  var telephone = $(this).val().split(" ").join("-").toUpperCase();
   if(telephone) {
     $(".contact-container").show();
     $(".telephone-container").show();
-    $(".telephone-container a").html(telephone);
+    $(".telephone-container a").html(telephone)
+
         $(".telephone-container").attr("href", "tel:"+telephone);
+
+
   }
 else {$(".telephone-container").hide();
 }
@@ -122,7 +125,7 @@ else {$(".telephone-container").hide();
 $(".mobile-container").hide();
 
 $("input.mobile").on("change keyup paste", function(){
-  var mobile = $(this).val();
+  var mobile = $(this).val().split(" ").join("-").toUpperCase();
   if(mobile) {
     $(".mobile-container").show();
     $(".contact-container").show();
@@ -142,7 +145,7 @@ else {$(".mobile-container").hide();
 $(".fax-container").hide();
 
 $("input.fax").on("change keyup paste", function(){
-  var fax = $(this).val();
+  var fax = $(this).val().split(" ").join("-").toUpperCase();
   if(fax) {
     $(".fax-container").show();
     $(".contact-container").show();
@@ -304,7 +307,7 @@ $(".email").on("change keyup paste", function(){
 
 
 //// clipboard time
-new Clipboard('.btn');
+
 new Clipboard('.btn', {
   text: function (trigger) {
 
