@@ -260,22 +260,13 @@ else {$(".position-container").hide();
 
 
 
-
-
-
-
-
-
-
-
-
 //
 // Email address
 // Check input field for data
 $(".email-container").hide();
 
 $(".email").on("change keyup paste", function(){
-  var email = $(this).val();
+  var email = $(this).val().toUpperCase();
   if(email) {
         $(".email-container").show();
         $(".contact-container").show();
@@ -286,17 +277,6 @@ $(".email").on("change keyup paste", function(){
   }
   updateHtmlSigRaw()
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
