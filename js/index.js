@@ -266,7 +266,7 @@ else {$(".position-container").hide();
 $(".email-container").hide();
 
 $(".email").on("change keyup paste", function(){
-  var email = $(this).val().toUpperCase();
+  var email = $(this).val();
   if(email) {
         $(".email-container").show();
         $(".contact-container").show();
