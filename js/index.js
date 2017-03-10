@@ -230,7 +230,7 @@ $("input.legal").on("change keyup paste", function(){
     $(".legal-container span").html(legal);
   }
 else {
-  $(".legal-container").hide();
+//  $(".legal-container").hide();
 
 }
 
