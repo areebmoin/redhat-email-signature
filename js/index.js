@@ -2,7 +2,7 @@ document.addEventListener("touchstart", function(){}, true);
 
 
 
-new Clipboard('.btn');
+
 
 // Place raw HTML of each version into appropriate containers
 function updateHtmlSigRaw() {
@@ -113,7 +113,7 @@ $("input.telephone").on("change keyup paste", function(){
     $(".telephone-container").show();
     $(".telephone-container a").html(telephone)
 
-        $(".telephone-container").attr("href", "tel:"+telephone);
+        $(".telephone-container a").attr("href", "tel:"+telephone);
 
 
   }
@@ -134,7 +134,7 @@ $("input.mobile").on("change keyup paste", function(){
     $(".mobile-container").show();
     $(".contact-container").show();
     $(".mobile-container a").html(mobile);
-        $(".mobile-container").attr("href", "tel:"+mobile);
+        $(".mobile-container a").attr("href", "tel:"+mobile);
   }
 else {$(".mobile-container").hide();
 }
@@ -154,7 +154,7 @@ $("input.fax").on("change keyup paste", function(){
     $(".fax-container").show();
     $(".contact-container").show();
     $(".fax-container a").html(fax);
-    $(".fax-container").attr("href", "tel:"+fax);
+    $(".fax-container a").attr("href", "tel:"+fax);
 
   }
 else {$(".fax-container").hide();
