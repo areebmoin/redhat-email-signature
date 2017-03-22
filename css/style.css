@@ -102,7 +102,6 @@ form {
 .preview {
   height: 100vh;
    overflow:auto;
-  background-image: linear-gradient(to left, transparent 0%, #aaa 100%) ;
 background-color:#eee;
   background-repeat: repeat-y;
   background-size: .5em;
@@ -537,11 +536,15 @@ overflow:hidden;
  z-index:1;}
 
 .preview input:checked + label:before {
-  animation: flash .6s linear forwards;}
+  animation: flash .6s linear forwards;
+
+}
 
 .preview input:focus + label {
   animation: pulsetab .6s ease ;
-  box-shadow: inset 0  0.2em #7cd5ee;}
+  box-shadow: inset 0  0.2em #7cd5ee;
+
+}
 
 @keyframes flash {
   0% {

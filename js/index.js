@@ -1,5 +1,9 @@
 document.addEventListener("touchstart", function(){}, true);
 
+
+
+new Clipboard('.btn');
+
 // Place raw HTML of each version into appropriate containers
 function updateHtmlSigRaw() {
 
