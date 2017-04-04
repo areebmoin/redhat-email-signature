@@ -80,6 +80,21 @@ else {$(".address2-container").hide();
 });
 
 
+//
+// fingerprint
+$(".fingerprint-container").hide();
+$("input.fingerprint").on("change keyup paste", function(){
+  var fingerprint = $(this).val();
+  if(fingerprint) {
+    $(".fingerprint-container").show();
+    $(".fingerprint-container span").html(fingerprint);
+  }
+else {$(".fingerprint-container").hide();
+}
+  updateHtmlSigRaw()
+});
+
+
 
 //
 // certifications
