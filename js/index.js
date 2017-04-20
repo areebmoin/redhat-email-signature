@@ -12,7 +12,7 @@ $(get_html_signature).find('*[style*="display: none"]').remove();
 $(get_html_signature).html();
 
 $("#html code").text($(get_html_signature).html());
-  $("#html code").prepend('&lt;style&gt; @import url(overpass-30e2.kxcdn.com/overpass.css); &lt;/style&gt;').text;
+  $("#html code").prepend('&lt;style&gt; @import url(//overpass-30e2.kxcdn.com/overpass.css); &lt;/style&gt;').text;
 }
 
 
